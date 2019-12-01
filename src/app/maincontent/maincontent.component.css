@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+
+.opidStyle {
+  text-align: center;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+}
+
+.flyidStyle {
+    text-align: center;
+    background-color: #007ea7;
+    background-image: linear-gradient(315deg, #007ea7 0%, #80ced7 74%);
+    
+  }
+
+  .pfcoidStyle {
+    text-align: center;
+    background-color: #923cb5;
+    background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+
+  }
+
+.cardHead {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: #fff;
+    opacity: 0.8;
+    text-align: left;
+}
+
+.emboss {
+  color: transparent;
+  font-family: Share Tech Mono;
+  text-shadow: -2px -1px 1px rgba(255, 255, 255, 1),
+  1px 1px 1px rgba(0, 0, 0, 1), 1px 0px 1px rgba(255, 255, 255, 0.2),
+  -1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);
+}
+
+.name {
+  font-size: 1.5rem;
+  
+  text-shadow: -2px -1px 1px rgba(255, 255, 255, 1),
+    1px 1px 1px rgba(0, 0, 0, 1), 1px 0px 1px rgba(255, 255, 255, 0.2),
+    -1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-align: left;
+  
+}
+
+.small-type {
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  color: white;
+  /* padding-left: 100px; */
+  line-height: 10px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.exp {
+  font-size: 1.5rem;
+  /* padding-left: 100px; */
+  text-shadow: -2px -1px 1px rgba(255, 255, 255, 1),
+    1px 1px 1px rgba(0, 0, 0, 1), 1px 0px 1px rgba(255, 255, 255, 0.2),
+    -1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.number {
+    display: inline-block;    
+      font-size: 2rem;
+      padding-bottom: 20px;
+    position: relative;
+    z-index: 999;
+    text-shadow: -2px -1px 1px rgba(255, 255, 255, 1),
+    1px 1px 1px rgba(0, 0, 0, 1), 1px 0px 1px rgba(255, 255, 255, 0.2),
+    -1px -1px 1px rgba(0, 0, 0, 1), -1px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  }

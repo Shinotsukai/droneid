@@ -1,0 +1,33 @@
+.welcomeBox {
+    background-color: skyblue;
+    margin-top: 125px;
+    padding: 5% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+    
+    -webkit-transform: skewY(-10deg);
+    -moz-transform: skewY(-10deg);
+    -ms-transform: skewY(-10deg);
+    -o-transform: skewY(-10deg);
+    transform: skewY(-10deg);
+  }
+  
+  .welcomeBox > .wrapper {
+    -webkit-transform: skewY(10deg);
+    -moz-transform: skewY(10deg);
+    -ms-transform: skewY(10deg);
+    -o-transform: skewY(10deg);
+    transform: skewY(10deg);
+    text-align: center;
+    
+  }
+
+  .welcomeHead {
+      font-size: 3rem;
+      font-weight: 700;
+      padding: 20px;
+      opacity: 0.8;
+  }
+
+  .welcomeText {
+      padding:10px 25px 30px 25px;
+      opacity: 0.8;
+  }

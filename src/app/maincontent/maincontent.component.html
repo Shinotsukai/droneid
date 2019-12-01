@@ -1,0 +1,135 @@
+<ons-page>
+<ons-toolbar>
+    <div class="center">
+        Drone ID
+    </div>
+    <div class="right">
+        <ons-toolbar-button icon="md-settings" (click)="onSettingsClick()"></ons-toolbar-button>
+    </div>
+</ons-toolbar>
+
+<div class="content">
+
+    <!--Operator Card-->
+    <ons-card class="opidStyle" >
+        <ons-row class="cardHead">
+            <ons-col>
+                Operator ID
+            </ons-col>
+        </ons-row>
+
+        <ons-row>
+                <ons-col>
+                    <div class="emboss number">{{storage.operatorDetails.opID}}</div>
+                </ons-col>
+        </ons-row>
+        <ons-row class="small-type">
+            <ons-col>
+                    Valid From
+            </ons-col>
+            <ons-col>
+                    UNTIL END
+            </ons-col>
+        </ons-row>
+
+        <ons-row class="emboss exp">
+                <ons-col>
+                        {{storage.operatorDetails.startDate}}
+                </ons-col>
+                <ons-col>
+                        {{storage.operatorDetails.expDate}}
+                </ons-col>
+        </ons-row>
+                    
+                    <ons-row  class="emboss name">
+                        <ons-col>
+                                {{storage.operatorDetails.name}}
+                        </ons-col>
+                    </ons-row>
+                    
+
+    </ons-card>
+
+    <!--Flyer Card-->
+
+    <ons-card class="flyidStyle" *ngIf="storage.flyerDetails">
+            <ons-row class="cardHead">
+                <ons-col>
+                    Flyer ID
+                </ons-col>
+            </ons-row>
+    
+            <ons-row>
+                    <ons-col>
+                        <div class="emboss number">{{storage.flyerDetails.flyID}}</div>
+                    </ons-col>
+            </ons-row>
+            <ons-row class="small-type">
+                <ons-col>
+                        Valid From
+                </ons-col>
+                <ons-col>
+                        UNTIL END
+                </ons-col>
+            </ons-row>
+    
+            <ons-row class="emboss exp">
+                    <ons-col>
+                            {{storage.flyerDetails.startDate}}
+                    </ons-col>
+                    <ons-col>
+                            {{storage.flyerDetails.expDate}}
+                    </ons-col>
+            </ons-row>
+                        
+                        <ons-row  class="emboss name">
+                            <ons-col>
+                                    {{storage.flyerDetails.name}}
+                            </ons-col>
+                        </ons-row>
+                        
+    
+        </ons-card>
+
+        <!--PFCO?-->
+        
+    <ons-card class="pfcoidStyle" *ngIf="storage.pfcoDetails">
+            <ons-row class="cardHead">
+                <ons-col>
+                    PFCO
+                </ons-col>
+            </ons-row>
+    
+            <ons-row>
+                    <ons-col>
+                        <div class="emboss number">{{storage.pfcoDetails.pfcoID}}</div>
+                    </ons-col>
+            </ons-row>
+            <ons-row class="small-type">
+                <ons-col>
+                        Valid From
+                </ons-col>
+                <ons-col>
+                        UNTIL END
+                </ons-col>
+            </ons-row>
+    
+            <ons-row class="emboss exp">
+                    <ons-col>
+                            {{storage.pfcoDetails.startDate}}
+                    </ons-col>
+                    <ons-col>
+                            {{storage.pfcoDetails.expDate}}
+                    </ons-col>
+            </ons-row>
+                        
+                        <ons-row  class="emboss name">
+                            <ons-col>
+                                    {{storage.pfcoDetails.name}}
+                            </ons-col>
+                        </ons-row>
+                        
+    
+        </ons-card>
+</div>
+</ons-page>

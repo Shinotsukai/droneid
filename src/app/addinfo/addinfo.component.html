@@ -1,0 +1,140 @@
+<ons-page>
+    <div class="content">
+
+        <ons-toolbar>
+            <div class="center">Drone ID Details</div>
+            <div class="right">
+                <ons-toolbar-button (click)="pushPage()">
+                    <ons-icon icon="md-close"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+
+    <ons-card>
+
+            <!--Operator ID-->
+                <ons-row>
+                        <label for="opID">Operator ID</label>
+                </ons-row>
+                <ons-row>
+                        <ons-input style="width: 100%;" [(ngModel)]="storage.operator.opID" id="opID" float placeholder="Operator ID" modifier="underbar" ></ons-input>
+                </ons-row>
+
+                <ons-row>
+                        <label for="firstName">Name / Organisation</label>
+                </ons-row>
+                <ons-row>
+                        <ons-input style="width: 100%;" id="name" [(ngModel)]="storage.operator.name" placeholder="Enter Name / Organisation" modifier="underbar" ></ons-input>
+                </ons-row>
+    
+                <!--Operator Registration Date-->
+                <ons-row>
+                        <label for="opStartDate">Start Date</label>
+                </ons-row>
+                <ons-row>
+                        <ons-input style="width: 100%;" [(ngModel)]="storage.operator.startDate" id="opStartDate" float placeholder="Start Date" modifier="underbar" ></ons-input>
+                </ons-row>
+
+                <ons-row>
+                        <label for="opStartDate">Expiry Date</label>
+                </ons-row>
+                <ons-row>
+                        <ons-input style="width: 100%;" [(ngModel)]="storage.operator.expDate" id="opStartDate" float placeholder="Expiry Date" modifier="underbar" ></ons-input>
+                </ons-row>
+
+                <ons-row>
+                        <ons-col>
+                            <ons-button modifier="large" (click)="updateOP()">Update Operator Details</ons-button>
+                        </ons-col>
+                    </ons-row>
+    
+    
+        </ons-card>
+
+        <ons-card>
+
+                <!--Flyer ID-->
+                    <ons-row>
+                            <label for="flyID">Flyer ID</label>
+                    </ons-row>
+                    <ons-row>
+                            <ons-input style="width: 100%;" [(ngModel)]="storage.flyer.flyID" id="flyID" float placeholder="Flyer ID" modifier="underbar" ></ons-input>
+                    </ons-row>
+
+                    <ons-row>
+                            <label for="firstName">Name / Organisation</label>
+                    </ons-row>
+                    <ons-row>
+                            <ons-input style="width: 100%;" id="name" [(ngModel)]="storage.flyer.name" placeholder="Enter Name / Organisation" modifier="underbar" ></ons-input>
+                    </ons-row>
+        
+                    <!--Flyer Registration Date-->
+                    <ons-row>
+                            <label for="flyStartDate">Start Date</label>
+                    </ons-row>
+                    <ons-row>
+                            <ons-input style="width: 100%;" [(ngModel)]="storage.flyer.startDate" id="flyStartDate" float placeholder="Start Date" modifier="underbar" ></ons-input>
+                    </ons-row>
+
+                    <ons-row>
+                            <label for="opStartDate">Expiry Date</label>
+                    </ons-row>
+                    <ons-row>
+                            <ons-input style="width: 100%;" [(ngModel)]="storage.flyer.expDate" id="opStartDate" float placeholder="Expiry Date" modifier="underbar" ></ons-input>
+                    </ons-row>
+
+                    <ons-row>
+                            <ons-col>
+                                <ons-button modifier="large" (click)="updateFly()">Update Flyer Details</ons-button>
+                            </ons-col>
+                        </ons-row>
+        
+        
+            </ons-card>
+            
+        <ons-card>
+
+                <!--PFCO ID-->
+                    <ons-row>
+                            <label for="pfcoID">PFCO ID</label>
+                    </ons-row>
+                    <ons-row>
+                            <ons-input style="width: 100%;" [(ngModel)]="storage.pfco.pfcoID" id="flyID" float placeholder="Flyer ID" modifier="underbar" ></ons-input>
+                    </ons-row>
+
+                    <ons-row>
+                            <label for="firstName">Name / Organisation</label>
+                    </ons-row>
+                    <ons-row>
+                            <ons-input style="width: 100%;" id="name" [(ngModel)]="storage.pfco.name" placeholder="Enter Name / Organisation" modifier="underbar" ></ons-input>
+                    </ons-row>
+        
+                    <!--Flyer Registration Date-->
+                    <ons-row>
+                            <label for="flyStartDate">Start Date</label>
+                    </ons-row>
+                    <ons-row>
+                            <ons-input style="width: 100%;" [(ngModel)]="storage.pfco.startDate" id="flyStartDate" float placeholder="Start Date" modifier="underbar" ></ons-input>
+                    </ons-row>
+
+                    <ons-row>
+                            <label for="opStartDate">Expiry Date</label>
+                    </ons-row>
+                    <ons-row>
+                            <ons-input style="width: 100%;" [(ngModel)]="storage.pfco.expDate" id="opStartDate" float placeholder="Expiry Date" modifier="underbar" ></ons-input>
+                    </ons-row>
+
+                    <ons-row>
+                            <ons-col>
+                                <ons-button modifier="large" (click)="updatePFCO()">Update PFCO Details</ons-button>
+                            </ons-col>
+                        </ons-row>
+        
+        
+            </ons-card>
+
+</div>
+
+
+</ons-page>
