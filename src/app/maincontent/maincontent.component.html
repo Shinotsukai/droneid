@@ -4,14 +4,14 @@
         Drone ID
     </div>
     <div class="right">
-        <ons-toolbar-button icon="md-settings" (click)="onSettingsClick()"></ons-toolbar-button>
+        <ons-toolbar-button icon="md-settings" style="color: #fff;" (click)="onSettingsClick()"></ons-toolbar-button>
     </div>
 </ons-toolbar>
 
 <div class="content">
 
     <!--Operator Card-->
-    <ons-card class="opidStyle" >
+    <ons-card class="opidStyle"  *ngIf="storage.operator.opID">
         <ons-row class="cardHead">
             <ons-col>
                 Operator ID
@@ -20,7 +20,7 @@
 
         <ons-row>
                 <ons-col>
-                    <div class="emboss number">{{storage.operatorDetails.opID}}</div>
+                    <div class="emboss number">{{storage?.operator?.opID}}</div>
                 </ons-col>
         </ons-row>
         <ons-row class="small-type">
@@ -34,16 +34,16 @@
 
         <ons-row class="emboss exp">
                 <ons-col>
-                        {{storage.operatorDetails.startDate}}
+                        {{storage?.operator?.startDate}}
                 </ons-col>
                 <ons-col>
-                        {{storage.operatorDetails.expDate}}
+                        {{storage?.operator?.expDate}}
                 </ons-col>
         </ons-row>
                     
                     <ons-row  class="emboss name">
                         <ons-col>
-                                {{storage.operatorDetails.name}}
+                                {{storage?.operator?.name}}
                         </ons-col>
                     </ons-row>
                     
@@ -52,7 +52,7 @@
 
     <!--Flyer Card-->
 
-    <ons-card class="flyidStyle" *ngIf="storage.flyerDetails">
+    <ons-card class="flyidStyle" *ngIf="storage.flyer.flyID">
             <ons-row class="cardHead">
                 <ons-col>
                     Flyer ID
@@ -61,7 +61,7 @@
     
             <ons-row>
                     <ons-col>
-                        <div class="emboss number">{{storage.flyerDetails.flyID}}</div>
+                        <div class="emboss number">{{storage?.flyer?.flyID}}</div>
                     </ons-col>
             </ons-row>
             <ons-row class="small-type">
@@ -75,16 +75,16 @@
     
             <ons-row class="emboss exp">
                     <ons-col>
-                            {{storage.flyerDetails.startDate}}
+                            {{storage?.flyer?.startDate}}
                     </ons-col>
                     <ons-col>
-                            {{storage.flyerDetails.expDate}}
+                            {{storage?.flyer?.expDate}}
                     </ons-col>
             </ons-row>
                         
                         <ons-row  class="emboss name">
                             <ons-col>
-                                    {{storage.flyerDetails.name}}
+                                    {{storage?.flyer?.name}}
                             </ons-col>
                         </ons-row>
                         
@@ -93,7 +93,7 @@
 
         <!--PFCO?-->
         
-    <ons-card class="pfcoidStyle" *ngIf="storage.pfcoDetails">
+    <ons-card class="pfcoidStyle" *ngIf="storage?.pfco.pfcoID">
             <ons-row class="cardHead">
                 <ons-col>
                     PFCO
@@ -102,7 +102,7 @@
     
             <ons-row>
                     <ons-col>
-                        <div class="emboss number">{{storage.pfcoDetails.pfcoID}}</div>
+                        <div class="emboss number">{{storage?.pfco?.pfcoID}}</div>
                     </ons-col>
             </ons-row>
             <ons-row class="small-type">
@@ -116,20 +116,24 @@
     
             <ons-row class="emboss exp">
                     <ons-col>
-                            {{storage.pfcoDetails.startDate}}
+                            {{storage?.pfco?.startDate}}
                     </ons-col>
                     <ons-col>
-                            {{storage.pfcoDetails.expDate}}
+                            {{storage?.pfco?.expDate}}
                     </ons-col>
             </ons-row>
                         
                         <ons-row  class="emboss name">
                             <ons-col>
-                                    {{storage.pfcoDetails.name}}
+                                    {{storage?.pfco?.name}}
                             </ons-col>
                         </ons-row>
                         
     
         </ons-card>
+
+
+
+       
 </div>
 </ons-page>

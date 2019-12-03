@@ -9,18 +9,19 @@ import { DatabaseService } from '../database.service';
 export class MaincontentComponent implements OnInit {
 
 
-  constructor(public storage: DatabaseService) { }
+  constructor(public storage: DatabaseService ) {
+
+   }
 
   ngOnInit() {
-
-    this.storage.checkStorage()
-
   }
-
-  
 
   onSettingsClick(){
     (document.getElementById('menu') as any).toggle();
+  }
+
+  flip(){
+    
   }
 
 }

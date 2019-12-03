@@ -1,74 +1,58 @@
 import { Injectable } from '@angular/core';
+import * as ons from 'onsenui';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseService {
-
-  public operatorDetails = [];
-  public flyerDetails:[];
-  public pfcoDetails:[];
-
-  public operator = {
-    opID: '',
-    name:'',
-    startDate:'',
-    expDate:''
-  }
-
-  public flyer = {
-    flyID: '',
-    name:'',
-    startDate:'',
-    expDate:''
-  }
-
-  public pfco = {
-    pfcoID: '',
-    name:'',
-    startDate:'',
-    expDate:''
+    operator: any;
+    flyer: any;
+    pfco: any;
+  constructor() { 
+this.checkDetailsStorage();
   }
 
 
-  constructor() { }
+  getFromStorage(key){
+return JSON.parse(localStorage.getItem(key))
+  }
 
-  checkStorage(){
-    if (localStorage.length > 0) {
 
-      if (localStorage['operator']) {
-      this.operatorDetails = JSON.parse(localStorage.getItem('operator'))
-      }
-      if (localStorage['flyer']) {
-      this.flyerDetails = JSON.parse(localStorage.getItem('flyer'))
-      }
-      if (localStorage['pfco']) {
-      this.pfcoDetails = JSON.parse(localStorage.getItem('pfco'))
-      }
-    } 
+  addToStorage(key, obj){
 
-    console.log(this.operatorDetails)
-
-    
+localStorage.setItem(key, JSON.stringify(obj))
+ons.notification.toast( `${obj.sectionName} updated sucessfully!`, {timeout: 2000});
   }
 
   checkDetailsStorage(){
-    if (localStorage.length > 0) {
-
-      if (localStorage['operator']) {
-      this.operator = JSON.parse(localStorage.getItem('operator'))
-      }
-      if (localStorage['flyer']) {
-      this.flyer = JSON.parse(localStorage.getItem('flyer'))
-      }
-      if (localStorage['pfco']) {
-      this.pfco = JSON.parse(localStorage.getItem('pfco'))
-      }
-    } 
-
-    console.log(this.operator)
-
-    
+      this.operator = localStorage['operator'] 
+      ? JSON.parse(localStorage.getItem('operator')) 
+      : {
+        opID: '',
+        name:'',
+        startDate:'',
+        expDate:'',
+        sectionName:'Operator Section'
+        
+      };
+      this.flyer = localStorage['flyer'] 
+      ? JSON.parse(localStorage.getItem('flyer')) 
+      : {
+        flyID: '',
+        name:'',
+        startDate:'',
+        expDate:'',
+        sectionName:'Flyer Section'
+      };
+      this.pfco = localStorage['pfco'] 
+      ? JSON.parse(localStorage.getItem('pfco')) 
+      : {
+        pfcoID: '',
+        name:'',
+        startDate:'',
+        expDate:'',
+        sectionName:'PFCO Section'
+      };
   }
 }
 

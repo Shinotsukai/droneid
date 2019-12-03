@@ -21,17 +21,7 @@ export class AddinfoComponent implements OnInit {
     this.storage.checkDetailsStorage()
   }
 
-  updateOP(){
-    localStorage.setItem('operator', JSON.stringify(this.storage.operator));
-  }
 
-  updateFly(){
-    localStorage.setItem('flyer', JSON.stringify(this.storage.flyer));
-  }
-
-  updatePFCO(){
-    localStorage.setItem('pfco', JSON.stringify(this.storage.pfco));
-  }
 
 
 

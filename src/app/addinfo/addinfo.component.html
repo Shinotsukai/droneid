@@ -1,15 +1,15 @@
 <ons-page>
-    <div class="content">
+
 
         <ons-toolbar>
             <div class="center">Drone ID Details</div>
             <div class="right">
-                <ons-toolbar-button (click)="pushPage()">
+                <ons-toolbar-button style="color: #fff;" (click)="pushPage()">
                     <ons-icon icon="md-close"></ons-icon>
                 </ons-toolbar-button>
             </div>
         </ons-toolbar>
-
+        <div class="content">
 
     <ons-card>
 
@@ -45,7 +45,7 @@
 
                 <ons-row>
                         <ons-col>
-                            <ons-button modifier="large" (click)="updateOP()">Update Operator Details</ons-button>
+                            <ons-button modifier="large" (click)="storage.addToStorage('operator', storage.operator)">Update Operator Details</ons-button>
                         </ons-col>
                     </ons-row>
     
@@ -86,7 +86,7 @@
 
                     <ons-row>
                             <ons-col>
-                                <ons-button modifier="large" (click)="updateFly()">Update Flyer Details</ons-button>
+                                <ons-button modifier="large" (click)="storage.addToStorage('flyer', storage.flyer)">Update Flyer Details</ons-button>
                             </ons-col>
                         </ons-row>
         
@@ -127,7 +127,7 @@
 
                     <ons-row>
                             <ons-col>
-                                <ons-button modifier="large" (click)="updatePFCO()">Update PFCO Details</ons-button>
+                                <ons-button modifier="large"  (click)="storage.addToStorage('pfco', storage.pfco)">Update PFCO Details</ons-button>
                             </ons-col>
                         </ons-row>
         
