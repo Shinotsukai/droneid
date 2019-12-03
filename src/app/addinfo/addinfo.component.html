@@ -11,9 +11,14 @@
         </ons-toolbar>
         <div class="content">
 
+                <!--Operator ID-->
+                <ons-row>
+                        <ons-col style="padding:0 16px;">
+                                <h1>Operator Section</h1>
+                        </ons-col>
+                </ons-row>
     <ons-card>
 
-            <!--Operator ID-->
                 <ons-row>
                         <label for="opID">Operator ID</label>
                 </ons-row>
@@ -42,19 +47,27 @@
                 <ons-row>
                         <ons-input style="width: 100%;" [(ngModel)]="storage.operator.expDate" id="opStartDate" float placeholder="Expiry Date" modifier="underbar" ></ons-input>
                 </ons-row>
-
-                <ons-row>
-                        <ons-col>
-                            <ons-button modifier="large" (click)="storage.addToStorage('operator', storage.operator)">Update Operator Details</ons-button>
-                        </ons-col>
-                    </ons-row>
     
     
         </ons-card>
 
+        <ons-row>
+                <ons-col style="padding:16px;">
+                    <ons-button modifier="large" (click)="storage.addToStorage('operator', storage.operator)">Update Operator Details</ons-button>
+                </ons-col>
+            </ons-row>
+
+                  <!--Flyer ID-->
+
+            <ons-row>
+                        <ons-col style="padding:0 16px;">
+                                <h1>Flyer Section</h1>
+                        </ons-col>
+                </ons-row>
+
         <ons-card>
 
-                <!--Flyer ID-->
+          
                     <ons-row>
                             <label for="flyID">Flyer ID</label>
                     </ons-row>
@@ -84,18 +97,28 @@
                             <ons-input style="width: 100%;" [(ngModel)]="storage.flyer.expDate" id="opStartDate" float placeholder="Expiry Date" modifier="underbar" ></ons-input>
                     </ons-row>
 
-                    <ons-row>
-                            <ons-col>
-                                <ons-button modifier="large" (click)="storage.addToStorage('flyer', storage.flyer)">Update Flyer Details</ons-button>
-                            </ons-col>
-                        </ons-row>
-        
+       
         
             </ons-card>
+
+            <ons-row>
+                        <ons-col style="padding:16px;">
+                            <ons-button modifier="large" (click)="storage.addToStorage('flyer', storage.flyer)">Update Flyer Details</ons-button>
+                        </ons-col>
+                    </ons-row>
+
+                    <!--PFCO ID-->
+
+                    
+            <ons-row>
+                        <ons-col style="padding:0 16px;">
+                                <h1>PFCO Section</h1>
+                        </ons-col>
+                </ons-row>
             
         <ons-card>
 
-                <!--PFCO ID-->
+                
                     <ons-row>
                             <label for="pfcoID">PFCO ID</label>
                     </ons-row>
@@ -125,14 +148,13 @@
                             <ons-input style="width: 100%;" [(ngModel)]="storage.pfco.expDate" id="opStartDate" float placeholder="Expiry Date" modifier="underbar" ></ons-input>
                     </ons-row>
 
-                    <ons-row>
-                            <ons-col>
-                                <ons-button modifier="large"  (click)="storage.addToStorage('pfco', storage.pfco)">Update PFCO Details</ons-button>
-                            </ons-col>
-                        </ons-row>
-        
-        
             </ons-card>
+
+            <ons-row>
+                        <ons-col style="padding:16px;">
+                            <ons-button modifier="large"  (click)="storage.addToStorage('pfco', storage.pfco)">Update PFCO Details</ons-button>
+                        </ons-col>
+                    </ons-row>
 
 </div>
 

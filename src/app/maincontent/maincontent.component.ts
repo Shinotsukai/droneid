@@ -20,8 +20,5 @@ export class MaincontentComponent implements OnInit {
     (document.getElementById('menu') as any).toggle();
   }
 
-  flip(){
-    
-  }
 
 }
